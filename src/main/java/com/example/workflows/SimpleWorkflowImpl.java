@@ -47,7 +47,7 @@ public class SimpleWorkflowImpl implements SimpleWorkflow {
         String result4 = echoOutput.getResult();
 
         // sync example
-        // EchoOutput echoOutput = activities.doEcho(echoInput);
+        // EchoOutput echoOutput = activities.echo4(echoInput);
 
         return new SimpleOutput(result4);
     }
