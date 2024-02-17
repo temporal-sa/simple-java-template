@@ -1,21 +1,12 @@
 package com.example.workflows;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SimpleOutput {
-
     private String result;
-
-    public SimpleOutput() {
-    }
-
-    public SimpleOutput(String result) {
-        this.result = result;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
 }

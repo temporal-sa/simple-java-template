@@ -29,7 +29,7 @@ public class SimpleWorkflowImpl implements SimpleWorkflow {
 
     @Override
     public SimpleOutput execute(SimpleInput input) {
-        logger.info("Simple workflow started, val = {}", input.getVal());
+        logger.info("Simple workflow started, input = {}", input.toString());
 
         String result1 = activities.echo1(input.getVal());
 

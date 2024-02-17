@@ -1,21 +1,12 @@
 package com.example.activities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class EchoInput {
     private String val;
-
-    public EchoInput() {
-    }
-
-    public EchoInput(String val) {
-        this.val = val;
-    }
-
-    public String getVal() {
-        return val;
-    }
-
-    public void setVal(String val) {
-        this.val = val;
-    }
-
 }

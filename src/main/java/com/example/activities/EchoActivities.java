@@ -7,14 +7,14 @@ import io.temporal.activity.ActivityMethod;
 public interface EchoActivities {
 
     @ActivityMethod
-    public String echo1(String input);
+    String echo1(String input);
 
     @ActivityMethod
-    public String echo2(String input);
+    String echo2(String input);
 
     @ActivityMethod
-    public String echo3(String input);
+    String echo3(String input);
 
     @ActivityMethod
-    public EchoOutput echo4(EchoInput input);
+    EchoOutput echo4(EchoInput input);
 }

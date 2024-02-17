@@ -1,20 +1,12 @@
 package com.example.workflows;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SimpleInput {
-
     private String val;
-
-    public SimpleInput() {
-    }
-    public SimpleInput(String val) {
-        this.val = val;
-    }
-
-    public String getVal() {
-        return val;
-    }
-
-    public void setVal(String val) {
-        this.val = val;
-    }
 }

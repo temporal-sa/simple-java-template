@@ -5,7 +5,7 @@ import io.temporal.workflow.WorkflowMethod;
 
 @WorkflowInterface
 public interface SimpleWorkflow {
-    
+
     @WorkflowMethod(name = "SimpleJava")
-    public SimpleOutput execute(SimpleInput input);
+    SimpleOutput execute(SimpleInput input);
 }

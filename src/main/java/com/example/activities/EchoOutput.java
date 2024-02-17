@@ -1,20 +1,12 @@
 package com.example.activities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class EchoOutput {
     private String result;
-
-    public EchoOutput() {
-    }
-
-    public EchoOutput(String result) {
-        this.result = result;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
 }
