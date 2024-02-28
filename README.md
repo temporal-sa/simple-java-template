@@ -1,6 +1,6 @@
 # simple-java-template
 
-To be used as a template project to bootstrap other projects
+To be used as a template project to bootstrap other projects on the [Temporal Java SDK](https://github.com/temporalio/sdk-java)
 
 ## Run Worker
 ```bash
