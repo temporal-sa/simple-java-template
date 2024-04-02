@@ -5,6 +5,7 @@ import com.example.activities.EchoInput;
 import com.example.activities.EchoOutput;
 import io.temporal.activity.ActivityOptions;
 import io.temporal.common.RetryOptions;
+import io.temporal.spring.boot.WorkflowImpl;
 import io.temporal.workflow.Async;
 import io.temporal.workflow.Promise;
 import io.temporal.workflow.Workflow;
@@ -12,6 +13,7 @@ import org.slf4j.Logger;
 
 import java.time.Duration;
 
+@WorkflowImpl(workers = "simple-worker")
 public class SimpleWorkflowImpl implements SimpleWorkflow {
 
     public static final Logger logger = Workflow.getLogger(SimpleWorkflowImpl.class);

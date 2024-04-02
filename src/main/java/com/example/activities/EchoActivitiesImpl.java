@@ -1,17 +1,22 @@
 package com.example.activities;
 
+import io.temporal.spring.boot.ActivityImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
+@Component
+@ActivityImpl(workers = "simple-worker")
 public class EchoActivitiesImpl implements EchoActivities {
 
     private static final Logger logger = LoggerFactory.getLogger(EchoActivitiesImpl.class);
 
     private final int number;
 
-    public EchoActivitiesImpl(int number) {
+    public EchoActivitiesImpl(@Value("${echo.number}") int number) {
         this.number = number;
     }
 

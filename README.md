@@ -4,7 +4,10 @@ To be used as a template project to bootstrap other projects on the [Temporal Ja
 
 ## Run Worker
 ```bash
-./gradlew run
+./gradlew bootRun
+
+# To run with a specific profile
+./gradlew bootRun --args='--spring.profiles.active=tc'
 ```
 
 ## Start Workflow
