@@ -9,14 +9,15 @@ import io.temporal.spring.boot.WorkflowImpl;
 import io.temporal.workflow.Async;
 import io.temporal.workflow.Promise;
 import io.temporal.workflow.Workflow;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 
 import java.time.Duration;
 
+@Slf4j
 @WorkflowImpl(workers = "simple-worker")
 public class SimpleWorkflowImpl implements SimpleWorkflow {
 
-    public static final Logger logger = Workflow.getLogger(SimpleWorkflowImpl.class);
     ActivityOptions activityOptions = ActivityOptions.newBuilder()
             .setStartToCloseTimeout(Duration.ofSeconds(5))
             .setRetryOptions(RetryOptions.newBuilder()
@@ -31,7 +32,7 @@ public class SimpleWorkflowImpl implements SimpleWorkflow {
 
     @Override
     public SimpleOutput execute(SimpleInput input) {
-        logger.info("Simple workflow started, input = {}", input.toString());
+        log.info("Simple workflow started, input = {}", input.toString());
 
         String result1 = activities.echo1(input.getVal());
 
@@ -39,7 +40,7 @@ public class SimpleWorkflowImpl implements SimpleWorkflow {
 
         String result3 = activities.echo3(result2);
 
-        logger.info("Sleeping for 1 second...");
+        log.info("Sleeping for 1 second...");
         Workflow.sleep(Duration.ofSeconds(1));
 
         EchoInput echoInput = new EchoInput(result3);
