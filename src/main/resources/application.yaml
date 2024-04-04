@@ -10,8 +10,8 @@ spring:
         task-queue: simple-task-queue
     workersAutoDiscovery:
       packages:
-      - com.example.workflows
-      - com.example.activities
+        - com.example.workflows
+        - com.example.activities
 
 logging:
   pattern:

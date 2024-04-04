@@ -1,8 +1,10 @@
 package com.example.workflows;
 
 import com.example.activities.EchoActivities;
-import com.example.activities.EchoInput;
-import com.example.activities.EchoOutput;
+import com.example.model.EchoInput;
+import com.example.model.EchoOutput;
+import com.example.model.SimpleInput;
+import com.example.model.SimpleOutput;
 import io.temporal.activity.ActivityOptions;
 import io.temporal.common.RetryOptions;
 import io.temporal.spring.boot.WorkflowImpl;
@@ -10,7 +12,6 @@ import io.temporal.workflow.Async;
 import io.temporal.workflow.Promise;
 import io.temporal.workflow.Workflow;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 
 import java.time.Duration;
 

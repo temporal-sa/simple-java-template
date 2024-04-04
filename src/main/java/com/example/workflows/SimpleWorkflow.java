@@ -1,5 +1,7 @@
 package com.example.workflows;
 
+import com.example.model.SimpleInput;
+import com.example.model.SimpleOutput;
 import io.temporal.workflow.WorkflowInterface;
 import io.temporal.workflow.WorkflowMethod;
 
