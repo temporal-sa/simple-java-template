@@ -1,8 +1,8 @@
 package com.example.activities;
 
+import com.example.model.EchoInput;
+import com.example.model.EchoOutput;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,15 +15,20 @@ public class EchoActivitiesImpl implements EchoActivities {
         this.number = number;
     }
 
+    // sleep util
+    private static void sleep(long seconds) {
+        try {
+            TimeUnit.SECONDS.sleep(seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public String echo1(String input) {
         log.info("Echo1 activity started, input = {}", input);
 
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep(1);
 
         String result = input;
         return result;
@@ -33,11 +38,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public String echo2(String input) {
         log.info("Echo2 activity started, input = {}", input);
 
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep(1);
 
         String result = input;
         return result;
@@ -47,11 +48,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public String echo3(String input) {
         log.info("Echo3 activity started, input = {}", input);
 
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep(1);
 
         String result = input;
         return result;
@@ -61,11 +58,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public EchoOutput echo4(EchoInput input) {
         log.info("Echo4 activity started, input = {}", input.toString());
 
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep(1);
 
         String result = "";
         for (int i = 0; i < number; i++) {
@@ -74,4 +67,5 @@ public class EchoActivitiesImpl implements EchoActivities {
 
         return new EchoOutput(result);
     }
+
 }

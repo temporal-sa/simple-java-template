@@ -1,5 +1,7 @@
 package com.example.activities;
 
+import com.example.model.EchoInput;
+import com.example.model.EchoOutput;
 import io.temporal.activity.ActivityInterface;
 import io.temporal.activity.ActivityMethod;
 
