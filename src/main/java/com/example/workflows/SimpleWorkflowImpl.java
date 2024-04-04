@@ -10,14 +10,16 @@ import io.temporal.common.RetryOptions;
 import io.temporal.workflow.Async;
 import io.temporal.workflow.Promise;
 import io.temporal.workflow.Workflow;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 
 import java.time.Duration;
 
-@Slf4j
 public class SimpleWorkflowImpl implements SimpleWorkflow {
 
-    ActivityOptions activityOptions = ActivityOptions.newBuilder()
+    private static final Logger log = Workflow.getLogger(SimpleWorkflowImpl.class);
+
+
+    private final ActivityOptions activityOptions = ActivityOptions.newBuilder()
             .setStartToCloseTimeout(Duration.ofSeconds(5))
             .setRetryOptions(RetryOptions.newBuilder()
                     .setInitialInterval(Duration.ofSeconds(1))
