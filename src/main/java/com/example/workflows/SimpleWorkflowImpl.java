@@ -20,7 +20,7 @@ import java.time.Duration;
 public class SimpleWorkflowImpl implements SimpleWorkflow {
 
     private static final Logger log = Workflow.getLogger(SimpleWorkflowImpl.class);
-    
+
     private final ActivityOptions activityOptions = ActivityOptions.newBuilder()
             .setStartToCloseTimeout(Duration.ofSeconds(5))
             .setRetryOptions(RetryOptions.newBuilder()
