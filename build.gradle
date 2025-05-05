@@ -7,16 +7,16 @@ repositories {
 }
 
 ext {
-    javaSDKVersion = '1.23.1'
+    javaSDKVersion = '1.29.0'
 }
 
 dependencies {
     implementation "io.temporal:temporal-sdk:$javaSDKVersion"
-    implementation 'ch.qos.logback:logback-classic:1.5.3'
+    implementation 'ch.qos.logback:logback-classic:1.5.18'
 
     // lombok
-    compileOnly 'org.projectlombok:lombok:1.18.32'
-    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
 //    // Use JUnit test framework
 //    testImplementation "io.temporal:temporal-testing:$javaSDKVersion"
@@ -28,7 +28,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 
