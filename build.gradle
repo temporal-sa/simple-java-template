@@ -2,6 +2,15 @@ plugins {
     id 'application'
 }
 
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -13,10 +22,8 @@ ext {
 dependencies {
     implementation "io.temporal:temporal-sdk:$javaSDKVersion"
     implementation 'ch.qos.logback:logback-classic:1.5.18'
-
-    // lombok
-    compileOnly 'org.projectlombok:lombok:1.18.38'
-    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
 //    // Use JUnit test framework
 //    testImplementation "io.temporal:temporal-testing:$javaSDKVersion"
@@ -26,11 +33,6 @@ dependencies {
 //    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
-}
 
 application {
     mainClass = 'com.example.worker.Main'

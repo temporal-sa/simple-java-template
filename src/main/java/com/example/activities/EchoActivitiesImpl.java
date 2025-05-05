@@ -16,9 +16,9 @@ public class EchoActivitiesImpl implements EchoActivities {
     }
 
     // sleep util
-    private static void sleep(long seconds) {
+    private static void sleep(long ms) {
         try {
-            TimeUnit.SECONDS.sleep(seconds);
+            TimeUnit.MILLISECONDS.sleep(ms);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -28,7 +28,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public String echo1(String input) {
         log.info("Echo1 activity started, input = {}", input);
 
-        sleep(1);
+        sleep(1000);
 
         String result = input;
         return result;
@@ -38,7 +38,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public String echo2(String input) {
         log.info("Echo2 activity started, input = {}", input);
 
-        sleep(1);
+        sleep(1000);
 
         String result = input;
         return result;
@@ -48,7 +48,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public String echo3(String input) {
         log.info("Echo3 activity started, input = {}", input);
 
-        sleep(1);
+        sleep(1000);
 
         String result = input;
         return result;
@@ -58,7 +58,7 @@ public class EchoActivitiesImpl implements EchoActivities {
     public EchoOutput echo4(EchoInput input) {
         log.info("Echo4 activity started, input = {}", input.toString());
 
-        sleep(1);
+        sleep(1000);
 
         String result = "";
         for (int i = 0; i < number; i++) {
@@ -67,5 +67,4 @@ public class EchoActivitiesImpl implements EchoActivities {
 
         return new EchoOutput(result);
     }
-
 }
