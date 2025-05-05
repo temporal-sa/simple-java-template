@@ -22,8 +22,8 @@ ext {
 dependencies {
     implementation "io.temporal:temporal-sdk:$javaSDKVersion"
     implementation 'ch.qos.logback:logback-classic:1.5.18'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
 //    // Use JUnit test framework
 //    testImplementation "io.temporal:temporal-testing:$javaSDKVersion"
